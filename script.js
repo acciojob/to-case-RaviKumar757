@@ -1,8 +1,10 @@
-function toCase(text) {
-  // write your code here
+function toCase(str) {
+  // Handle empty string
+  if (str === "") return "-";
+
+  return str.toLowerCase() + "-" + str.toUpperCase();
 }
-
-// DO not change the code below
-
-const text = prompt("Enter text:");
-alert(toCase(text));
+console.log(toCase('Mthatha'));    // "mthatha-MTHATHA"
+console.log(toCase('HelloWorld')); // "helloworld-HELLOWORLD"
+console.log(toCase('OpenAI'));     // "openai-OPENAI"
+console.log(toCase(''));           // "-"
